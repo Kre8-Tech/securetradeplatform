@@ -6,7 +6,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000; // Use Heroku's PORT or fallback to 5000 for local development
 
 // Enable CORS and JSON parsing
 app.use(cors());
@@ -50,6 +50,11 @@ const authenticateJWT = (req, res, next) => {
     next();
   });
 };
+
+// Root route
+app.get('/', (req, res) => {
+  res.send('Welcome to the SecureTradePlatform API!');
+});
 
 // Endpoint to login
 app.post('/api/login', (req, res) => {
