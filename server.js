@@ -6,9 +6,9 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const app = express();
-const port = process.env.PORT || 5000; // Use Heroku's PORT or fallback to 5000 for local development
+const port = process.env.PORT || 5000;
 
-// Enable CORS and JSON parsing
+// Enable CORS
 app.use(cors());
 app.use(express.json());
 
@@ -21,7 +21,7 @@ const wss = new WebSocket.Server({ server });
 // Secret key for JWT
 const JWT_SECRET = 'your-secret-key';
 
-// Mock data for users (including passwords and roles)
+// Mock data for users
 const users = [
   { id: 1, name: "Admin", email: "admin@example.com", password: bcrypt.hashSync('admin123', 10), role: 'admin' },
   { id: 2, name: "User A", email: "userA@example.com", password: bcrypt.hashSync('userA123', 10), role: 'user' },
