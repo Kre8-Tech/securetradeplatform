@@ -21,72 +21,6 @@ const wss = new WebSocket.Server({ server });
 // Secret key for JWT
 const JWT_SECRET = 'your-secret-key';
 
-// Endpoint to register a new user
-app.post('/api/register', (req, res) => {
-  const { name, email, password, role } = req.body;
-
-  // Check if the email is already registered
-  const existingUser = users.find((u) => u.email === email);
-  if (existingUser) {
-    return res.status(400).json({ message: 'Email already registered.' });
-  }
-
-  // Hash the password
-  const hashedPassword = bcrypt.hashSync(password, 10);
-
-  // Create a new user
-  const newUser = {
-    id: users.length + 1,
-    name,
-    email,
-    password: hashedPassword,
-    role: role || 'user', // Default role is 'user'
-  };
-
-  // Add the user to the mock database
-  users.push(newUser);
-
-  // Return the new user (excluding the password)
-  const { password: _, ...userWithoutPassword } = newUser;
-  res.status(201).json(userWithoutPassword);
-});
-
-// Mock data for trading insights
-const tradingInsights = [
-  { asset: 'BTC', volume: 1000, successRate: 95 },
-  { asset: 'ETH', volume: 800, successRate: 90 },
-  { asset: 'XRP', volume: 600, successRate: 85 },
-];
-
-// Endpoint to fetch trading insights
-app.get('/api/trading-insights', authenticateJWT, (req, res) => {
-  res.json(tradingInsights);
-});
-
-// Mock data for financial performance
-const financialPerformance = [
-  { month: 'January', revenue: 50000 },
-  { month: 'February', revenue: 60000 },
-  { month: 'March', revenue: 70000 },
-];
-
-// Endpoint to fetch financial performance
-app.get('/api/financial-performance', authenticateJWT, (req, res) => {
-  res.json(financialPerformance);
-});
-
-// Mock data for predictive analytics
-const predictiveAnalytics = [
-  { asset: 'BTC', predictedPrice: 50000 },
-  { asset: 'ETH', predictedPrice: 4000 },
-  { asset: 'XRP', predictedPrice: 1.5 },
-];
-
-// Endpoint to fetch predictive analytics
-app.get('/api/predictive-analytics', authenticateJWT, (req, res) => {
-  res.json(predictiveAnalytics);
-});
-
 // Mock data for users (including passwords and roles)
 const users = [
   { id: 1, name: "Admin", email: "admin@example.com", password: bcrypt.hashSync('admin123', 10), role: 'admin' },
@@ -162,6 +96,33 @@ app.post('/api/users/:id/update-status', authenticateJWT, (req, res) => {
   } else {
     res.status(404).json({ message: 'User not found' });
   }
+});
+
+// Endpoint to fetch trading insights
+app.get('/api/trading-insights', authenticateJWT, (req, res) => {
+  res.json([
+    { asset: 'BTC', volume: 1000, successRate: 95 },
+    { asset: 'ETH', volume: 800, successRate: 90 },
+    { asset: 'XRP', volume: 600, successRate: 85 },
+  ]);
+});
+
+// Endpoint to fetch financial performance
+app.get('/api/financial-performance', authenticateJWT, (req, res) => {
+  res.json([
+    { month: 'January', revenue: 50000 },
+    { month: 'February', revenue: 60000 },
+    { month: 'March', revenue: 70000 },
+  ]);
+});
+
+// Endpoint to fetch predictive analytics
+app.get('/api/predictive-analytics', authenticateJWT, (req, res) => {
+  res.json([
+    { asset: 'BTC', predictedPrice: 50000 },
+    { asset: 'ETH', predictedPrice: 4000 },
+    { asset: 'XRP', predictedPrice: 1.5 },
+  ]);
 });
 
 // WebSocket connection handler
