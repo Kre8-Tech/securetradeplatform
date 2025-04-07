@@ -1,0 +1,19 @@
+/* Unauthorized.css */
+.unauthorized-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.unauthorized-container h1 {
+  color: #ff4d4d;
+  margin-bottom: 20px;
+}
+
+.unauthorized-container p {
+  color: #333;
+  font-size: 1.2em;
+}

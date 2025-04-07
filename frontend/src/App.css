@@ -1,0 +1,20 @@
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 200px;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  margin-left: 220px; /* Ensure content stays clear of the sidebar */
+  padding: 20px;
+  flex-grow: 1;
+}

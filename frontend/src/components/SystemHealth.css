@@ -1,0 +1,30 @@
+.system-health {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.health-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.health-card {
+  flex: 1 1 calc(25% - 20px);
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.health-card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.health-card p {
+  font-size: 24px;
+  font-weight: bold;
+}

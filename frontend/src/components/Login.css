@@ -1,0 +1,67 @@
+/* Login.css */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  width: 100%;
+  max-width: 400px; /* Limit the width of the form for responsiveness */
+  margin: auto; /* Center the form on the page */
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background color */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-container input,
+.login-container button {
+  width: 100%; /* Make input and button full width */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc; /* Light grey border */
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
+}
+
+.login-container input:focus {
+  border-color: #007bff; /* Blue border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+.login-container button {
+  background-color: #007bff; /* Blue background color */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.login-container button:hover {
+  background-color: #005bbf; /* Darker blue on hover */
+}
+
+.login-container p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-container a {
+  color: #007bff; /* Blue link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.login-container a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+body {
+  min-height: 100vh; /* Minimum height of the viewport */
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  margin: 0;
+  padding: 0;
+}

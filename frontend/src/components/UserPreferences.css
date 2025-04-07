@@ -1,0 +1,49 @@
+/* frontend/src/components/UserPreferences.css */
+.user-preferences {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.user-preferences h1 {
+  text-align: center;
+}
+
+.user-preferences .error {
+  color: red;
+  text-align: center;
+}
+
+.user-preferences label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.user-preferences select,
+.user-preferences input[type="checkbox"] {
+  margin-left: 10px;
+}
+
+.user-preferences .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.user-preferences button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.user-preferences button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.user-preferences button[type="button"] {
+  background-color: #6c757d;
+}

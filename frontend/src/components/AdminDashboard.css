@@ -1,0 +1,62 @@
+/* AdminDashboard.css */
+.admin-dashboard {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative; /* Ensure proper stacking context */
+  z-index: 1; /* Ensure tiles are above any background elements */
+}
+
+.admin-dashboard h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 20px; /* Space between tiles */
+}
+
+.tile {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative; /* Ensure proper stacking context */
+  z-index: 1; /* Ensure tiles are above any background elements */
+}
+
+.tile h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.tile.analytics,
+.tile.financial-performance,
+.tile.predictive-analytics,
+.tile.trading-insights,
+.tile.user-stats,
+.tile.system-health {
+  height: 250px; /* Fixed height for smaller tiles */
+}
+
+.tile.transactions {
+  grid-column: span 2; /* Span two columns for the transactions tile */
+  height: 300px; /* Fixed height for the larger tile */
+}
+
+.tile.transactions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tile.transactions li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.tile.transactions li:last-child {
+  border-bottom: none;
+}

@@ -1,0 +1,81 @@
+/* frontend/src/components/Support.css */
+
+.support-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.support-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.tabs button:hover {
+  background: #0056b3;
+}
+
+.tabs button.active {
+  background: #28a745;
+}
+
+.tabs button.active:hover {
+  background: #218838;
+}
+
+.support-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.support-container label {
+  margin-bottom: 10px;
+}
+
+.support-container textarea,
+.support-container input[type="text"],
+.support-container input[type="email"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.support-container button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.support-container button[type="submit"]:hover {
+  background: #218838;
+}
+
+.error {
+  color: red;
+  margin-bottom: 20px;
+}

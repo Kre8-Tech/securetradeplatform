@@ -1,0 +1,29 @@
+/* frontend/src/components/TradingInsights.css */
+.trading-insights {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.trading-insights h2 {
+  margin-bottom: 20px;
+}
+
+.trading-insights h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.trading-insights ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.trading-insights li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+}

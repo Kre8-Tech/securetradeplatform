@@ -1,0 +1,28 @@
+/* Blocked.css */
+.blocked-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.blocked-container h1 {
+  color: #ff4d4d;
+  margin-bottom: 20px;
+}
+
+.blocked-container p {
+  color: #333;
+  font-size: 1.2em;
+}
+
+.blocked-container a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.blocked-container a:hover {
+  text-decoration: underline;
+}

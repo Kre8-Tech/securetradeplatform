@@ -1,0 +1,49 @@
+.register {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.register form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.register input,
+.register select,
+.register button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.register button {
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+}
+
+.register button:hover {
+  background-color: #2980b9;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+.success {
+  color: green;
+  text-align: center;
+}

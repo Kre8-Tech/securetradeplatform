@@ -1,0 +1,16 @@
+/* index.css */
+/* Add global styles here */
+/* Ensure no .navbar styles are defined here */
+
+/* Example global styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Push content below navbar */
+.main-content {
+  margin-top: 70px; /* Adjust based on navbar height */
+  padding: 20px;
+}

@@ -1,0 +1,40 @@
+.courier-dashboard {
+  padding: 20px;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.top-row {
+  display: flex;
+  gap: 20px;
+}
+
+.bottom-row {
+  display: flex;
+}
+
+.tile {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+}
+
+.tile.large {
+  flex: 2; /* Make the bottom tile larger */
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 20px;
+}
+
+.loading-message {
+  font-size: 1.2em;
+  color: #333;
+}
